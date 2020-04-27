@@ -10,11 +10,10 @@ body {
 }
 
 h1 {
-    margin-bottom:1px;
-    margin-top:0 ;
-
-    font-size: 30px;
-    line-height: 1;
+    font-size: calc(25px + (35 - 25) * (100vw - 400px)/(800-400)) !important;
+    line-height: .9 !important;
+    margin:0!important;
+    padding-bottom:15px;
 }
 
 h3.heading {
@@ -38,7 +37,6 @@ p.authors {
 
 p.intro {
     font-size: calc(14px + (16 - 14) * (100vw - 400px)/(800-400));
-    font-weight: 350;
 }
 
 p#socialmedia {
@@ -47,10 +45,10 @@ p#socialmedia {
 
     font-size:12px;
     text-align:left;
+    white-space: nowrap;
 }
 
 p#title, a#title {
-    margin-bottom:2.5%;
     margin-top:0;
 
     font-size:18px;
@@ -83,6 +81,13 @@ text {
     font-color:#0C5E6F !important;
 }
 
+
+section.subsection {
+   margin-left:25%;
+    margin-right:20%;
+    padding-top:5%;
+    max-width:700px;
+}
 section.me {
     background-color: #ECECEC;
 }
@@ -101,15 +106,20 @@ section.myresearch {
     background-color: white;
 }
 
-div.card {
-    padding-top:0px;
+div#floated { /* profile image */
+    float: left;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right:20px;
+    background: none; 
 }
 
 div.me {
     padding-bottom:25px;
-    padding-left:15%;
-    padding-right:15%;
+    margin-left:25%;
+    margin-right:20%;
     padding-top:5%;
+    max-width:700px;
 }
 
 
@@ -139,49 +149,6 @@ td.myresearch {
     line-height: 15px;
 } /* Will be displayed at the bottom */
 
-
-
-/*AFTER scaling*/
-@media only screen and (max-width: 700px){
-    table.myresearchtable tr.row > * {
-        display: table;
-        display: center;
-    }
-
-    table.myresearchtable tr.row {
-        display: inline-table;
-    }
-
-    td.pubimage > * {
-        display: table-header-group; 
-
-        margin-left: 60px;
-
-        /* text-align:center !important;*/
-    } /* Will be displayed at the top */
-
-    td.myresearch > * {
-
-        display: table-footer-group;
-        text-align:left;
-        display: block;
-        margin-left: 60px;
-        margin-top: 20px;
-
-    } /* Will be displayed at the bottom */
-
-}
-
-
-
-#floated { /* profile image */
-    float: left;
-    margin-left:2.5%;
-    margin-right:2.5%;
-
-    background: none; 
-}
-
 table.newstable {
     margin-left: 5%;
 }
@@ -206,18 +173,12 @@ img.pubimage {
 }
 
 img.profile {
-    float: left;
-
-    border-radius: 50%;
-    height: auto;
-    margin-bottom:2em;
-    margin-left:.01em;
-    margin-right:.01em; 
-    min-width: 170px;
-    width: 33%;
-
-    padding:3px;
+    max-height: 170px;
+    max-width: 170px;
+    padding: 5px;
+    
     border:1px solid #C5CDCE;
+     border-radius: 1%;
     background-color:white;
 }
 
@@ -299,6 +260,44 @@ pre {
     color: #fff;
 }
 
+/*scaling to smaller window or mobile*/
+@media only screen and (max-width: 750px){
+    table.myresearchtable tr.row > * {
+        display: table;
+        display: center;
+    }
+
+    table.myresearchtable tr.row {
+        display: inline-table;
+    }
+
+    td.pubimage > * {
+        display: table-header-group; 
+
+        margin-left: 60px;
+
+        /* text-align:center !important;*/
+    } /* Will be displayed at the top */
+
+    td.myresearch > * {
+
+        display: table-footer-group;
+        text-align:left;
+        display: block;
+        margin-left: 60px;
+        margin-top: 20px;
+
+    } /* Will be displayed at the bottom */
+
+    /* profile image */
+    img.profile {
+        margin-bottom:10px !important;
+        margin-left:50px !important;
+    }
+
+}
+
+
 footer {
     font-family: 'Roboto', sans-serif;
     background-color: #ECECEC;
@@ -308,4 +307,3 @@ footer {
     color: #99afba;
     font-size: 12px;
 }
-
