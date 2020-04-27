@@ -275,8 +275,6 @@ pre {
         display: table-header-group; 
 
         margin-left: 60px;
-
-        /* text-align:center !important;*/
     } /* Will be displayed at the top */
 
     td.myresearch > * {
