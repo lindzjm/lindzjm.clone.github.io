@@ -10,8 +10,8 @@ body {
 }
 
 h1 {
-    font-size: calc(25px + (35 - 25) * (100vw - 400px)/(800-400)) !important;
-    line-height: .9 !important;
+    font-size: calc(25px + (35 - 25) * (100vw - 400px)/(800-400)) ;
+    /*line-height: .9 !important;*/
     margin:0!important;
     padding-bottom:15px;
 }
@@ -35,8 +35,8 @@ p.authors {
     font-weight: 350;
 }
 
-p.intro {
-    font-size: calc(14px + (16 - 14) * (100vw - 400px)/(800-400));
+p#intro {
+    font-size: calc(12px + (16 - 12) * (100vw - 400px)/(800-400)) !important;
 }
 
 p#socialmedia {
@@ -274,7 +274,7 @@ pre {
     td.pubimage > * {
         display: table-header-group; 
 
-        margin-left: 60px;
+       /* margin-left: 60px;*/
     } /* Will be displayed at the top */
 
     td.myresearch > * {
@@ -282,7 +282,7 @@ pre {
         display: table-footer-group;
         text-align:left;
         display: block;
-        margin-left: 60px;
+        /*margin-left: 60px;*/
         margin-top: 20px;
 
     } /* Will be displayed at the bottom */
