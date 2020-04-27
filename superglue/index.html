@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SuperGlue Project</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <!-- stats.js lib --> 
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  </head>
+  <body>
+
+    <!-- SECTION 1 -->
+    <section class="intro"><div id="particles-js"></div> 
+      <div id="intro">
+        <div>
+          <div id="title">
+            <div id="banner-image">
+              <img class="logo" alt="logo" src="assets/superglue_logo.svg">
+            </div>
+            <div id="banner-text">
+              <h1>SuperGlue</h1>
+            </div>
+          </div>
+          <p id="subtitle">Learning Feature Matching <span>with Graph Neural Networks</span></p>
+          <p id="subtitle" class="conference">CVPR 2020 Oral</p>
+        </div>
+
+        <table class="affiliations"><tbody>
+            <tr class="authors" id="row1">
+              <td class="authors" id="col1">
+                <a class="authorlink" target="_blank" href="../index.html">Paul&#8209;Edouard Sarlin</a>
+              </td>
+
+              <td class="authors" id="col2">
+                <a class="authorlink" target="_blank" href="https://scholar.google.com/citations?user=nPMPwIgAAAAJ&hl=en">Daniel DeTone</a>
+              </td>
+
+              <td class="authors" id="col3">
+                <a class="authorlink" target="_blank" href="https://scholar.google.com/citations?user=RCTeTV0AAAAJ&hl=en">Tomasz Malisiewicz</a>
+              </td>
+
+              <td class="authors" id="col4">
+                <a class="authorlink" target="_blank" href="https://scholar.google.ch/citations?user=qn1ejaQAAAAJ&hl=de">Andrew Rabinovich</a>
+              </td>
+            </tr>
+
+            <tr class="affiliations" id="row2"> 
+              <td class="affiliations">ETH Zurich</td>
+              <td class="affiliations">Magic Leap, Inc.</td>
+              <td class="affiliations">Magic Leap, Inc.</td>
+              <td class="affiliations">Magic Leap, Inc.</td>
+            </tr>
+          </tbody></table>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="researchlinks" id="researchlinks">
+      <div class="container" id="researchlinks">
+
+        <table class="researchlinks"><tbody> 
+
+            <tr class="researchicons" id="row1">  
+              <td class="researchlinks" id="col1">
+                <a class="researchlinks" target="_blank" href="https://arxiv.org/pdf/1911.11763.pdf"><img class="researchicons" alt="Paper Icon" src="assets/superglue_thumbnail.png"></a>
+              </td>
+
+              <td class="researchlinks" id="col2">
+                <a href="https://github.com/magicleap/SuperGluePretrainedNetwork" target="_blank"><img class="researchicons" alt="Code Icon" src="assets/github.svg"></a>
+              </td>
+            </tr>
+
+            <tr class="researchlinks" id="row2">  
+              <td class="researchlinks" id="col1">
+                <a class="researchlinks" target="_blank" href="https://arxiv.org/pdf/1911.11763.pdf">Paper</a>
+              </td>
+
+              <td class="researchlinks" id="col2">
+                <a class="researchlinks" target="_blank" href="https://github.com/magicleap/SuperGluePretrainedNetwork">Code</a>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+      </div>
+    </section>
+
+    <hr> <!-- line break -->
+
+    <!-- SECTION 3 -->
+    <section class="subsection">
+      <div class="sections">
+        <h2>Abstract</h2>
+        <p class="abstract">
+        We introduce <b>SuperGlue, a neural network that matches two sets of local features by jointly finding correspondences and rejecting non-matchable points.</b> Assignments are estimated by solving a differentiable optimal transport problem, whose costs are predicted by a graph neural network. We introduce a flexible context aggregation mechanism based on attention, enabling SuperGlue to reason about the underlying 3D scene and feature assignments jointly. Compared to traditional, hand-designed heuristics, our technique learns priors over geometric transformations and regularities of the 3D world through end-to-end training from image pairs. SuperGlue outperforms other learned approaches and achieves state-of-the-art results on the task of pose estimation in challenging real-world indoor and outdoor environments. The proposed method performs matching in real-time on a modern GPU and can be readily integrated into modern SfM or SLAM systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="subsection" id="figures">
+      <div class="sections">
+        <div id="figure1">
+          <span class="tag-wrap">
+            <img id="figure1" alt="teaser" src="assets/figure1.svg">
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section class="subsection">
+      <div class="sections">
+        <h2>Bibtext</h2>
+
+        <pre>@inproceedings{sarlin20superglue,
+  title     = {{SuperGlue: Learning Feature Matching with Graph Neural Networks}},
+  author    = {Paul-Edouard Sarlin and
+               Daniel DeTone and
+               Tomasz Malisiewicz and
+               Andrew Rabinovich},
+  booktitle = {CVPR},
+  year      = {2020},
+}</pre>
+      </div>
+    </section>
+
+    <script src="background.js"></script>
+  </body>
+</html>

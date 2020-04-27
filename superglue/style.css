@@ -1,0 +1,293 @@
+html {
+    background-color: #F7F7F8;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(8px + (13 - 8) * (100vw - 400px)/(800-400)); /* https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/ */
+    letter-spacing: 1px;
+    line-height: 1.5; 
+    color:#222222;
+}
+
+/* ---- particles.js container ----  */
+#particles-js { 
+    display: flex;
+    position: absolute; 
+    width: 100%; 
+    height: 104%; 
+    padding-bottom:5%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:2%;
+    z-index: 1;
+} 
+
+h1 {
+    padding-bottom:5px;
+    padding-top:1px;
+
+    color: #CC0000 !important;
+    font-size: 60px !important;
+    letter-spacing: 3px;
+    line-height: 1;
+    text-align: center;
+    z-index: 100;
+}
+
+h2 {
+    padding-bottom:5px;
+    padding-top:auto;
+
+    font-size: 35px !important;
+    line-height: 1;
+    text-align: left;
+}
+
+p, p.abstract {
+    line-height: 18px;
+    font-style: normal;
+    font-size: calc(8px + (13 - 8) * (100vw - 400px)/(800-400));
+    font-weight: 348;
+    text-align: left;
+}
+
+p#subtitle {
+    background: src(#particle-canvas);
+
+    font-size:20px;
+    font-weight:330 !important;
+    line-height: 1.2;
+    text-align:center;
+}
+
+span {
+    display: inline-block;
+}
+
+a:active, a:hover {
+    color: #474747;
+    text-decoration: underline;
+}
+
+a.authorlink {
+    color: #CC0000;
+    text-decoration: none;
+}
+
+a.researchlinks, a.research:hover {
+    color: #CC0000 !important; /*#0C5E6F*/
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-decoration: none !important;
+}
+
+section.intro {
+    position: relative;
+    width: 100%;
+    background-color: #F7F7F8;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+section.researchlinks, .bibtext {
+    padding-bottom:15px !important;
+    padding-top:25px !important;
+}
+
+section.subsection {
+    padding-bottom:45px;
+}
+
+div#figure1 {
+    text-align: center;
+}
+
+div#intro {
+    position: relative;
+    z-index:9;
+}
+
+div.sections {
+    padding-left: 20%;
+    padding-right: 20%;
+    max-width:100%;
+}
+
+/*BEFORE SuperGlue logo and title scales down*/
+div#title {
+    display: table; width: 100%;
+    display: center !important;
+    table-layout: fixed;
+
+    text-align: center !important;
+}
+div#banner-text {
+    display:  inline-block;
+} /* Will be displayed at the top of the pseudo-table */
+div#banner-image {
+    display:  inline-block; 
+} /* Will be displayed at the bottom */
+
+/*AFTER SuperGlue logo and title scales down and to mobile*/
+@media screen and (max-width: 700px){
+    #banner-text {
+        display: table-footer-group;
+    } /* Will be displayed at the bottom */
+    #banner-image {
+        display: center table-header-group; 
+    } /* Will be displayed at the top */
+}
+
+div.video-container {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+/*AFTER video scales down and to mobile*/
+div.video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 90%;
+    height: 90%;
+    max-height: 236.5;
+    max-width: 506;
+}
+
+p.conference {
+    padding-top: 10px;
+}
+
+/*BEFORE affiliations table scales down*/
+table.affiliations {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    width: 30%;
+
+    text-align: center;
+}
+
+/*AFTER affiliations table scales down, turning columns to rows*/
+@media screen and (max-width:700px) {
+    table.affiliations tr > *{
+        display: block;
+        display: center;
+    }
+
+    table.affiliations tr {
+        display: table-cell;
+        /* width: 5px;*/
+    }
+
+    table.affiliations {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    td.authors {
+        padding-right: 25px;
+
+    }
+
+    td.affiliations {
+        padding-left: 25px;
+    }
+
+    tr.authors, tr.affiliations {
+        line-height: 25px;
+        text-align: left;
+        vertical-align: top;
+    }
+}
+
+table.figures {
+    max-width: auto;
+    vertical-align: top;
+    table-layout:fixed;
+}
+
+table.researchlinks {
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 25%;
+
+    text-align: center;
+}
+
+td.affiliations {
+    font-size:12px;
+    font-weight: 300;
+    width: 10px;
+    white-space: nowrap;
+}
+
+td.authors {
+    font-size:17px;
+    font-weight: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    white-space: nowrap; /*text remains on one line*/
+}
+
+td.researchlinks {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform:uppercase;
+    font-size: 10px;
+}
+
+hr {
+    width: 60%;
+    size: 100px !important;
+    color: black;
+}  
+
+span.tag-wrap {
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.1));
+}
+
+/*clip path dimension editor: https://bennettfeely.com/clippy/*/   
+img#figure1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: scale-down; max-width: 100%;
+
+    -webkit-clip-path: polygon(49% 10%, 51% 1%, 68% 10%, 100% 10%, 100% 100%, 0 100%, 0 10%, 21% 10%);
+    clip-path: polygon(49% 10%, 51% 1%, 68% 10%, 100% 10%, 100% 100%, 0 100%, 0 10%, 21% 10%);
+}
+
+img.logo {
+    position: initial;
+    padding-bottom: 1px;
+    padding-left: 10%;
+    padding-right: 25px;
+    object-fit: cover;
+    position: relative;
+    max-width: 200px; 
+    vertical-align: bottom;
+}
+
+img.researchicons {
+    height: 60px;
+    width: 60px;
+}
+
+pre {
+    width: 100%;
+
+    background-color: white !important;
+    font-size: .9vw !important;
+    font-weight: 300;
+}
