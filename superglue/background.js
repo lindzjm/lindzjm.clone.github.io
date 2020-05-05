@@ -9,7 +9,7 @@ particlesJS("particles-js", {
     },
 
     "color": {
-      "value": "#FF0000"
+      "value": ["#FF0000", "#0000FF"],
     },
     "shape": {
       "type": "circle",
@@ -116,5 +116,3 @@ particlesJS("particles-js", {
 
   "retina_detect": false
 });
-
-  // https://github.com/VincentGarreau/particles.js
